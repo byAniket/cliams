@@ -26,7 +26,11 @@ class Create extends Component {
       method: 'POST',
       mode: 'no-cors',
       Origin: 'http://192.168.5.227:3000',
-      body: JSON.stringify(this.state)
+      body: JSON.stringify({
+        "policyNum": parseInt(this.state.policyNum),
+        "type": this.state.type,
+        "description": this.state.description
+      })
     }).then(function(response){
       console.log(response);
       return response.json();
