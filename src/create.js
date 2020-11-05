@@ -24,8 +24,6 @@ class Create extends Component {
 
     fetch('https://va9rrvvlz4.execute-api.us-east-2.amazonaws.com/test/claims', {
       method: 'POST',
-      mode: 'no-cors',
-      Origin: 'http://192.168.5.227:3000',
       body: JSON.stringify({
         "policyNum": parseInt(this.state.policyNum),
         "type": this.state.type,
